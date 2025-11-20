@@ -1,11 +1,90 @@
 /* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
+/* 1. FUNDO DA PÁGINA: Um gradiente moderno (Roxo para Azul) */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 2. NAVBAR: Deixando transparente para destacar o logo */
+nav {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Fundo escuro translúcido */
+    box-shadow: none !important; /* Remove a sombra padrão */
+}
+
+nav .brand-logo, nav ul a {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* 3. CARTÃO PRINCIPAL: Fundo branco centralizado e arredondado */
+#index-banner .container {
+    background-color: #ffffff;
+    margin-top: 60px; /* Mais espaço do topo */
+    padding: 40px;
+    border-radius: 15px; /* Cantos bem arredondados */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra forte para dar profundidade */
+}
+
+/* 4. BOTÕES: Mudando de Vermelho para o Roxo do tema */
+.btn {
+    background-color: #667eea !important; /* Cor do tema */
+    border-radius: 25px !important; /* Botões redondos modernos */
+    font-weight: bold;
+    width: 100%; /* Botão ocupa toda a largura disponível */
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #764ba2 !important;
+    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+}
+
+/* 5. ABAS (TABS): Estilizando para combinar */
+.tabs {
+    background-color: transparent !important;
+}
+.tabs .tab a {
+    color: #b0b0b0 !important; /* Cor cinza quando inativo */
+    font-weight: bold;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: rgba(102, 126, 234, 0.1) !important;
+    color: #667eea !important; /* Roxo quando ativo */
+}
+.tabs .indicator {
+    background-color: #667eea !important; /* Cor da barra inferior da aba */
+}
+
+/* 6. INPUTS: Mudando a cor da linha de digitação */
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #667eea !important;
+    box-shadow: 0 1px 0 0 #667eea !important;
+}
+
+input:focus + label {
+    color: #667eea !important;
+}
+
+.input-field .prefix.active {
+    color: #667eea !important;
+}
+
+/* Mantendo estilos utilitários originais */
 .icon-block {
   padding: 0 15px;
 }
